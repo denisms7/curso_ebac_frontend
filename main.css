@@ -84,9 +84,27 @@ section h2,
 }
 
 .artigos article h3 {
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 24px;
 }   
 
 section h2 {
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 32px;
+}
+
+#esportes {
+    background-color: rgb(201, 245, 230);
+}
+
+#economia{
+    background-color: rgb(216, 205, 177);
+}
+
+#entretenimento{
+    background-color: rgb(195, 224, 187);
+}
+
+#tecnologia {
+    background-color: rgb(157, 156, 238);
 }
