@@ -97,14 +97,35 @@ section h2 {
     background-color: rgb(201, 245, 230);
 }
 
+#esportes .artigos article a {
+    background-color: rgb(111, 206, 87);
+    color: black;
+}
+
 #economia{
     background-color: rgb(216, 205, 177);
+}
+
+#economia .artigos article a {
+    background-color: rgb(228, 180, 22);
+    color: black;
 }
 
 #entretenimento{
     background-color: rgb(195, 224, 187);
 }
 
+#entretenimento .artigos article a {
+    background-color: rgb(82, 231, 90);
+    color: black;
+}
+
 #tecnologia {
     background-color: rgb(157, 156, 238);
+
+}
+
+#tecnologia .artigos article a {
+    background-color: rgb(92, 62, 226);
+    color: rgb(255, 255, 255);
 }
