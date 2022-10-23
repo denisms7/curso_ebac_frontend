@@ -19,28 +19,40 @@
             <h1>Cadastro</h1>
             <form action="">
                 <label for="nome">Nome Completo:</label>
-                <input type="text" id="nome" maxlength="150">
+                <input type="text" id="nome" name="nnome" maxlength="150">
 
                 <label for="email">E-mail:</label>
-                <input type="email" id="email" maxlength="150">
+                <input type="email" id="email" name="nemail" maxlength="150">
+
+                <div class="tipo">
+                    <input type="radio" checked id="tele" name="tipo">
+                    <label for="tele">Telefone</label><br>
+                    
+                    <input type="radio" id="celu" name="tipo">
+                    <label for="celu">Celular</label><br>
+                </div>
 
                 <label for="telefone">Telefone:</label>
-                <input type="tel" id="telefone" maxlength="15">
+                <input type="tel" id="telefone" name="ntelefone" maxlength="15">
 
-                <label for="cep">CPF:</label>
-                <input type="text" id="cep" maxlength="15">
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" name="ncpf" maxlength="15">
 
                 <label for="cep">CEP:</label>
-                <input type="text" id="cep" maxlength="10">
+                <input type="text" id="cep" name="ncep" maxlength="10">
 
                 <label for="endereco">Endereço Completo:</label>
-                <input type="text" id="endereco" maxlength="255">
+                <input type="text" id="endereco" name="nendereco" maxlength="255">
 
                 <button type="submit">Enviar</button>
             </form>
         </div>
     </div>
 
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+    <script src="./js/jquery.mask.min.js"></script>
     <script src="./js/main.js"></script>
 </body>
 
