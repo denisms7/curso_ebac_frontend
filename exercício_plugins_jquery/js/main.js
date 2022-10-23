@@ -4,11 +4,13 @@ $(document).ready(function () {
     $('#cep').mask('00.000-000')
 
     $('#celu').click(function () {
+        $('#label-telefone').html('N° Celular:')
         $('#telefone').val('')
         $('#telefone').mask('(00) 0000-0000')
     });
 
     $('#tele').click(function () {
+        $('#label-telefone').html('N° Telefone:')
         $('#telefone').val('')
         $('#telefone').mask('(00) 00000-0000')
     });
