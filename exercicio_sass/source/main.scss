@@ -81,7 +81,8 @@ section {
     text-decoration: none;
 
     &:hover {
-        background-color: cores.$CorMenus;
+        background-color: cores.$CorBotao;
+        box-shadow: 2px 2px 2px cores.$CorSombra;
     }
 }
 

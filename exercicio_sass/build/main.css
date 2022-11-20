@@ -37,7 +37,7 @@ li {
 }
 
 header {
-  background-color: #182C61;
+  background-color: #182b61;
   position: sticky;
   top: 0;
   left: 0;
@@ -90,7 +90,8 @@ section {
   text-decoration: none;
 }
 .product-button:hover {
-  background-color: #182C61;
+  background-color: #44bd32;
+  box-shadow: 2px 2px 2px rgb(0, 0, 0);
 }
 
 /*# sourceMappingURL=main.css.map */
