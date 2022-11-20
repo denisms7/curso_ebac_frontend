@@ -1,6 +1,6 @@
-$CorBotao: #44bd32;
-$CorFundo: #fff;
-$CorMenus: #182C61;
+@use 'cores';
+@use 'screen';
+
 
 * {
     margin: 0;
@@ -10,7 +10,7 @@ $CorMenus: #182C61;
 }
 
 body {
-    background-color: $CorFundo;
+    background-color: cores.$CorFundo;
 }
 
 li {
@@ -24,7 +24,7 @@ li {
 }
 
 header {
-    background-color: $CorMenus;
+    background-color: cores.$CorMenus;
     position: sticky;
     top: 0;
     left: 0;
@@ -45,7 +45,7 @@ header {
         margin-left: 24px;
 
         & a {
-            color: $CorFundo;
+            color: cores.$CorFundo;
             text-decoration: none;
         }
     }
@@ -72,8 +72,8 @@ section {
 
 .product-button {
     display: block;
-    background-color: $CorBotao;
-    color: $CorFundo;
+    background-color: cores.$CorBotao;
+    color: cores.$CorFundo;
     text-align: center;
     padding: 8px 0;
     border-radius: 8px;
@@ -81,28 +81,7 @@ section {
     text-decoration: none;
 
     &:hover {
-        background-color: $CorMenus;
+        background-color: cores.$CorMenus;
     }
 }
 
-
-@media screen and (max-width: 1023px) {
-    .container {
-        max-width: 80%;
-    }
-
-    .products {
-        grid-template-columns: repeat(2, 48.5%);
-        column-gap: 3%;
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .products {
-        display: block;
-    }
-
-    .product-item {
-        margin-bottom: 32px;
-    }
-}
