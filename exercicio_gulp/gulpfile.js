@@ -1,6 +1,8 @@
 const gulp = require('gulp')
 const sass = require('gulp-sass')(require('sass'))
 const uglify = require('gulp-uglify')
+const obfuscate = require('gulp-obfuscate')
+
 
 function padrao() {
     console.log('exec via gulp')
@@ -9,6 +11,7 @@ function padrao() {
 function comprimeJs() {
     return gulp.src('./source/js/*.js')
         .pipe(uglify())
+        .pipe(obfuscate())
         .pipe(gulp.dest('./build/js/'))
 
 }
@@ -26,4 +29,3 @@ function compilaSass() {
 exports.default = padrao
 exports.sass = compilaSass
 exports.comprimeJs = comprimeJs
-npm install --save-dev gulp-obfuscate

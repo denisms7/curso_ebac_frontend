@@ -1,1 +1,1 @@
-function padrao(){console.log("teste JavaScript")}
+function ಠ_ಠ832(){console.log("teste JavaScript")}
