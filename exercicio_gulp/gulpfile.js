@@ -26,3 +26,4 @@ function compilaSass() {
 exports.default = padrao
 exports.sass = compilaSass
 exports.comprimeJs = comprimeJs
+npm install --save-dev gulp-obfuscate
