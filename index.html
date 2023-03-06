@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Github</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <img class="profile-avatar" id="id-profile-avatar" src="https://via.placeholder.com/180x180" alt=".">
+            <h1 class="profile-name" id="id-profile-name">#Erro Nome</h1>
+            <h2 class="profile-username" id="id-profile-username">#Erro User</h2>
+            <ul class="numbers">
+                <li class="numbers-item">
+                    <h4>Repositórios</h4>
+                    <span id="id-repositorios">0</span>
+                </li>
+                <li class="numbers-item">
+                    <h4>Seguidores</h4>
+                    <span id="id-seguidores">0</span>
+                </li>
+                <li class="numbers-item">
+                    <h4>Seguindo</h4>
+                    <span id="id-seguindo">0</span>
+                </li>
+            </ul>
+            <a href="#" target="_blank" class="profile-link" id="id-botao">Ver no Github</a>
+        </div>
+    </header>
+
+    <script>
+        window.onload = function () {
+            v_avatar = document.getElementById('id-profile-avatar')
+            v_nome = document.getElementById('id-profile-name')
+            v_usuario = document.getElementById('id-profile-username')
+            v_repositorios = document.getElementById('id-repositorios')
+            v_seguidores = document.getElementById('id-seguidores')
+            v_seguindo = document.getElementById('id-seguindo')
+            v_botao = document.getElementById('id-botao')
+            v_url = 'https://api.github.com/users/denisms7'
+            let dados = new XMLHttpRequest();
+            try {
+                dados.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        const response = JSON.parse(this.responseText);
+                        v_avatar.src = response.avatar_url;
+                        v_nome.innerText = response.name;
+                        v_usuario.innerText = response.login;
+                        v_repositorios.innerText = response.public_repos;
+                        v_seguidores.innerText = response.followers;
+                        v_seguindo.innerText = response.following;
+                        v_botao.href = response.html_url
+                    } else if (this.readyState == 4) {
+                        console.log('Erro na API de dados');
+                    }
+                };
+                dados.open('GET', v_url, true);
+                dados.send();
+            }
+            catch {
+                console.log('Erro na API de dados')
+            }
+        }
+    </script>
+</body>
+
+</html>
